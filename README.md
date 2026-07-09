@@ -1,10 +1,11 @@
 <img width="6951" height="3225" alt="Untitled Document 2 (1)" src="https://github.com/user-attachments/assets/fc2be432-f714-4b43-b5ba-200988178e2c" />
 
-# PICO — The Universal, Hands-Free Voice AI Assistant
+# PICO — Hands-Free Voice AI Assiant Speaker 
 
 > **"For those who ask. For those who question."**
 
-Pico is a physical, hands-free voice-activated AI companion built on the **Arduino UNO Q 4GB** single-board computer and the **ReSpeaker XVF3800 4-Mic Array**. 
+Introducing Pico, a smart LLM based assitant speaker built for your you, for your home. Pico is more than just assitant, it is someone who will satisfy your thirst of questions, generative and brainstorm expert will help you think and brainstorm new ideas or projects you working on, research companion, your mentor, your helper in day to day life, Pico can help you with any thing from cooking to philosphy to complex science questions, to fact checking, to checking news and match stores, weather broadcast, your music streaming dj/speaker with support of Spotify.
+
 
 Unlike conventional smart speakers, Pico offers an open, modular ecosystem. It gives users complete agency over their hardware and software: choose any AI model (from cloud APIs to local offline models), configure custom voice triggers, set hard token budgets, and manage the device through a responsive React companion web app.
 
