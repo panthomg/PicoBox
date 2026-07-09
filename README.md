@@ -9,6 +9,14 @@ Freedom to ask anything. Pico is for students, for professionals, for the elderl
 Pico talks to you in your natural language. You don't type you speak what you want to. Pico is there to understand you and help you regarding nearly infinite topics and things.
 
 
+# Just say "Hey Pico"
+> **4-5 meter range, across the room**
+> **Have it remember your voice and memories with you**
+> **Always ready to answer anything you ask 24/7 at your service**
+> **Use any LLM Model you want, your choice. Add custom commands, personality, actions, etc.**
+> **Unlike other electronics with support LLM like your phone and pcs, Pico stands distraction free dedicated for you reach your motive.** 
+
+
 Unlike conventional smart speakers, Pico offers an open, modular ecosystem. It gives users complete agency over their hardware and software: choose any AI model (from cloud APIs to local offline models), configure custom voice triggers, set hard token budgets, and manage the device through a responsive React companion web app.
 
 ---
