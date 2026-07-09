@@ -54,6 +54,27 @@ Unlike conventional smart speakers, Pico offers an open, modular ecosystem. It g
 
 ---
 
+
+---
+
+## 📄 License & Copyright
+
+**© 2026 Panth Mavani, Gujarat, India. All Rights Reserved.**
+
+PicoBox is a proprietary project. No part of this software or its associated documentation may be copied, modified, distributed, or used without explicit written permission from the author.
+
+* **Licensing Inquiries:** omgpanth6623@gmail.com
+* *Made with ❤️ for those who ask. For those who question.* 🎙️✨
+
+---
+
+## 🔗 Quick Links
+
+* [GitHub Repository](https://github.com/panthomg/PicoBox/)
+* [Showcase Guide](https://github.com/panthomg/PicoBox/blob/main/use_guide.md)
+* [Competition Submission](https://www.google.com/search?q=%23)
+
+---
 ## 🛠️ System Architecture
 
 Pico leverages the hybrid dual-processor design of the Arduino UNO Q to segregate real-time audio handling from heavy AI logic, preventing playback jitter.
