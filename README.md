@@ -3,7 +3,7 @@
 # PICO — Hands-Free Voice AI Assiant Speaker 
 
 > **"For those who ask. For those who question."**
-
+> Note: Everything written below is written/typed by a human please don't mind mistakes. A human can make mistake.
 Introducing Pico, a smart LLM based assitant speaker built for your you, for your home. Pico is more than just assitant, it is someone who will satisfy your thirst of questions, generative and brainstorm expert will help you think and brainstorm new ideas or projects you working on, research companion, your mentor, your helper in day to day life, Pico can help you with any thing from cooking to philosphy to complex science questions, to fact checking, to checking news and match stores, weather broadcast, your music streaming dj/speaker with support of Spotify.
 Freedom to ask anything. Pico is for students, for professionals, for the elderly, for anyone who asks. Knowledge should be accessible to everyone with Pico. 
 Pico talks to you in your natural language. You don't type you speak what you want to. Pico is there to understand you and help you regarding nearly infinite topics and things.
@@ -22,16 +22,15 @@ Unlike conventional smart speakers, Pico offers an open, modular ecosystem. It g
 
 # Why Pico exist? Why is it the best in its field/Niche?
 
-> - Pico is extremly customizable from LLM model selection, to your voice pick up, to Pico's custom voice and personality.
-> - Each family member can recieve a unique personality and memories realted to them with voice identification
-> - Pico works with LLM API KEYS, your own api keys stored locally encrypted. Select any model you like.
-> - Pico can search internet *(depends on LLM model)*, Pico has ability to think before answering *(depends on LLM model)*
-> - Unlike a phone, you don't have to touch or type anything just call "Hey Pico" and ask. This makes it way easier for younger children to seek for knowledge or senior citizens access such powerful LLMs without them having to deal with complex user interfaces on phone they can use their voice and recieve answer in voice significantly redcuing the time spent on getting you work done. Your phone is designed for the young and tech-savvy. Pico is designed for everyone.
-> - 🙌 Truly Hands-Free : When you're cooking, writing, or working—you can't use your phone. Pico is always available.
-> - Stationary, always in the room plugged, No notifications, Built for the space
+- Pico is extremly customizable from LLM model selection, to your voice pick up, to Pico's custom voice and personality.
+- Each family member can recieve a unique personality and memories realted to them with voice identification
+- Pico works with LLM API KEYS, your own api keys stored locally encrypted. Select any model you like.
+- Pico can search internet *(depends on LLM model)*, Pico has ability to think before answering *(depends on LLM model)*
+- Unlike a phone, you don't have to touch or type anything just call "Hey Pico" and ask. This makes it way easier for younger children to seek for knowledge or senior citizens access such powerful LLMs without them having to deal with complex user interfaces on phone they can use their voice and recieve answer in voice significantly redcuing the time spent on getting you work done. Your phone is designed for the young and tech-savvy. Pico is designed for everyone.
+- 🙌 Truly Hands-Free : When you're cooking, writing, or working—you can't use your phone. Pico is always available.
+- Stationary, always in the room plugged, No notifications, Built for the space
 
->
->  *Everything* is going according to **plan**.
+
 ---
 
 ## 🚀 Key Features
