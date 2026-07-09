@@ -85,3 +85,25 @@ Here is the cleaned and properly formatted markdown documentation for your proje
 | **Material** | 3D-printed PLA (prototype), PETG/ABS (final) |
 | **Weight** | ~500g (estimated) |
 | **Ports** | USB-C (power), USB-A (accessories), 3.5mm AUX |
+
+
+---
+
+## 📄 License & Copyright
+
+**© 2026 Panth Mavani, Gujarat, India. All Rights Reserved.**
+
+PicoBox is a proprietary project. No part of this software or its associated documentation may be copied, modified, distributed, or used without explicit written permission from the author.
+
+* **Licensing Inquiries:** omgpanth6623@gmail.com
+* *Made with ❤️ for those who ask. For those who question.* 🎙️✨
+
+---
+
+## 🔗 Quick Links
+
+* [GitHub Repository](https://github.com/panthomg/PicoBox/)
+* [Showcase Guide](https://github.com/panthomg/PicoBox/blob/main/use_guide.md)
+* [Competition Submission](https://www.google.com/search?q=%23)
+
+---
