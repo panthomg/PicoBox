@@ -11220,3 +11220,164 @@ Now that you've run your first programs:
 3. Dive into [MPU Programming](../03-software-development/mpu-programming.md)
 4. Check out more [Code Examples](../05-examples/) for advanced use cases
 
+# Arduino Uno Q Knowledge Base
+
+A comprehensive knowledge base for the Arduino Uno Q,
+
+## Overview
+
+The Arduino Uno Q is a powerful development board featuring a dual-processor architecture:
+- **MPU (Microprocessor)**: Qualcomm Dragonwing™ QRB2210 running Debian Linux
+- **MCU (Microcontroller)**: STM32U585 running Zephyr RTOS
+
+This knowledge base provides complete documentation, code examples, and templates for developing applications on both processors.
+
+## Quick Start
+
+1. **Get Started**: Read the [Getting Started Guide](01-getting-started/setup.md)
+2. **First Program**: Follow the [First Program Tutorial](01-getting-started/first-program.md)
+3. **Explore Examples**: Check out [Code Examples](05-examples/)
+4. **Reference**: Use [API Reference](06-reference/api-reference.md) and [Pin Reference](06-reference/pin-reference.md)
+
+## Documentation Structure
+
+### 01-getting-started/
+- [Overview](01-getting-started/overview.md) - Board introduction and key features
+- [Setup](01-getting-started/setup.md) - Development environment setup
+- [First Program](01-getting-started/first-program.md) - Hello world examples
+
+### 02-hardware/
+- [Specifications](02-hardware/specifications.md) - Complete hardware specifications
+- [Pinout](02-hardware/pinout.md) - GPIO pinout and functions
+- [Peripherals](02-hardware/peripherals.md) - I2C, SPI, UART, ADC, PWM
+- [LED Matrix](02-hardware/led-matrix.md) - LED matrix and RGB LEDs
+
+### 03-software-development/
+- [MCU Programming](03-software-development/mcu-programming.md) - Arduino sketches for MCU
+- [MPU Programming](03-software-development/mpu-programming.md) - Python/Linux apps for MPU
+- [Communication](03-software-development/communication.md) - MPU-MCU communication via RPC
+- [LED Matrix Display Guide](03-software-development/led-matrix-display-guide.md) - **Complete guide to displaying on LED matrix**
+- [Libraries](03-software-development/libraries.md) - Available libraries
+- [Arduino Libraries Reference](03-software-development/arduino-libraries-reference.md) - Comprehensive Arduino library documentation
+- [MicroPython](03-software-development/micropython.md) - MicroPython programming guide
+- [Arduino IoT Cloud API](03-software-development/arduino-iot-cloud-api.md) - IoT Cloud API documentation
+- [Arduino Bricks](03-software-development/bricks.md) - Modular prebuilt containers
+- [Bricks Catalog](03-software-development/bricks-catalog.md) - Complete list of available bricks and examples
+
+### 04-deployment/
+- [CLI Deployment](04-deployment/cli-deployment.md) - **Command line deployment (recommended)**
+- [Arduino App Lab](04-deployment/app-lab.md) - Using Arduino App Lab IDE
+- [Uploading](04-deployment/uploading.md) - Uploading code to MCU and MPU
+- [Debugging](04-deployment/debugging.md) - Debugging techniques
+
+### 05-examples/
+- [Basic Examples](05-examples/basic/) - Blink, analog read, PWM fade
+- [Arduino Built-in Examples](05-examples/arduino-built-in-examples.md) - Complete guide to Arduino built-in examples
+- [Sensor Examples](05-examples/sensors/) - Temperature, I2C sensors
+- [Communication Examples](05-examples/communication/) - RPC, HTTP
+- [AI/ML Examples](05-examples/ai-ml/) - Machine learning examples
+- [Brick Examples](05-examples/bricks/) - Arduino Bricks usage examples
+
+### 06-reference/
+- [API Reference](06-reference/api-reference.md) - Complete API documentation
+- [Arduino Language Reference](06-reference/arduino-language-reference.md) - Complete Arduino programming language reference
+- [Pin Reference](06-reference/pin-reference.md) - Pin functions and usage
+- [Troubleshooting](06-reference/troubleshooting.md) - Common issues and solutions
+
+## Key Features
+
+### Hardware Capabilities
+- **Dual-Processor**: MPU for complex computing, MCU for real-time control
+- **Connectivity**: Wi-Fi 5, Bluetooth 5.1
+- **Interfaces**: I2C/I3C, SPI, UART, CAN, PWM, ADC
+- **Onboard Features**: 8×13 LED matrix, 4× RGB LEDs, Qwiic connector
+
+### Software Development
+- **MCU**: Arduino sketches with real-time capabilities
+- **MPU**: Python applications on Debian Linux
+- **Communication**: RPC library for MPU-MCU communication
+- **Development Tools**: Arduino App Lab, Arduino IDE
+
+## Development Workflow
+
+1. **Setup Environment**: Install Arduino App Lab and connect board
+2. **Develop MCU Code**: Write Arduino sketches for real-time control
+3. **Develop MPU Code**: Write Python scripts for complex processing
+4. **Integrate**: Use RPC for communication between processors
+5. **Deploy**: Upload to board and test
+6. **Debug**: Use serial monitors and debugging tools
+
+## Code Examples
+
+### MCU Example (Arduino Sketch)
+```cpp
+void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(1000);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(1000);
+}
+```
+
+### MPU Example (Python)
+```python
+#!/usr/bin/env python3
+print("Hello from Arduino Uno Q MPU!")
+```
+
+### RPC Communication Example
+```cpp
+// MCU (RPC Server)
+#include <Arduino_Bridge.h>
+Bridge.begin();
+Bridge.registerFunction("getData", getData);
+```
+
+```python
+# MPU (RPC Client)
+from arduino_bridge import Bridge
+bridge = Bridge()
+result = bridge.call("getData")
+```
+
+## Resources
+
+### Official Documentation
+- [Arduino Uno Q Product Page](https://www.arduino.cc/product-uno-q)
+- [Hardware Documentation](https://docs.arduino.cc/hardware/uno-q)
+- [User Manual](https://docs.arduino.cc/tutorials/uno-q/user-manual/)
+- [Arduino Programming Documentation](https://docs.arduino.cc/programming/)
+- [Arduino Language Reference](https://docs.arduino.cc/language-reference/)
+- [Arduino Libraries](https://docs.arduino.cc/libraries/)
+- [Arduino Built-in Examples](https://docs.arduino.cc/built-in-examples/)
+- [Arduino MicroPython](https://docs.arduino.cc/micropython/)
+- [Arduino IoT Cloud API](https://docs.arduino.cc/cloud-api/)
+
+### Support
+- [Arduino Forum](https://forum.arduino.cc)
+- [Arduino Support](https://support.arduino.cc)
+- [Troubleshooting Guide](06-reference/troubleshooting.md)
+
+## Contributing
+
+This knowledge base is designed to be comprehensive and up-to-date. If you find errors or have suggestions:
+1. Review the existing documentation
+2. Check official Arduino documentation
+3. Test examples before suggesting changes
+
+## License
+
+This knowledge base is provided as-is for educational and development purposes. Refer to Arduino's official documentation for authoritative information.
+
+## Version
+
+This knowledge base is based on Arduino Uno Q documentation as of 2024. Always refer to the latest official documentation for the most current information.
+
+---
+
+**Note**: This knowledge base is designed to work with Cursor AI to assist in Arduino Uno Q development. All code examples and documentation are structured to be easily accessible and understandable by AI assistants.
+
