@@ -59,27 +59,16 @@ Yes. Pico is not just another voice assistant — it is a complete, customizable
 Most voice assistants lock you into one AI provider. Pico lets you choose from DeepSeek, OpenAI, Anthropic Claude, Google Gemini, Groq, Cohere, Mistral, or even local models via Ollama — and switch with a single click in the web app. No vendor lock-in. No forced upgrades. You own your assistant.
 
 2. Complete Web App Ecosystem — Not Just a Hardware Box
-Most DIY voice assistants are just a microphone and speaker. Pico includes a full production-grade web app with:
-
-Real-time Dashboard: Device status, usage stats, live activity feed
-
-Chat History: Full conversation logs with search, filters, and export
-
-Token Usage Dashboard: Real-time cost tracking with daily/monthly budget limits
-
-Remote Mode: Use your phone as a microphone and speaker for Pico via WebRTC
-
-Settings Panel: Change voice, wake word, personality, AI provider, response style
-
-Multi-User Management: Add and remove family voiceprints with different permissions
-
-Service Connections: One-click Spotify, YouTube, and Google Calendar integration
-
-Custom Commands: Create voice macros and routines
-
-Firmware Updates: One-click software updates
-
-Privacy Controls: Clear chat history, export data, manage voiceprints
+- Most DIY voice assistants are just a microphone and speaker. Pico includes a full production-grade web app with:
+- Real-time Dashboard: Device status, usage stats, live activity feed
+- Chat History: Full conversation logs with search, filters, and export
+- Token Usage Dashboard: Real-time cost tracking with daily/monthly budget limits
+- Remote Mode: Use your phone as a microphone and speaker for Pico via WebRTC
+- Settings Panel: Change voice, wake word, personality, AI provider, response style
+- Multi-User Management: Add and remove family voiceprints with different permissions
+- Service Connections: One-click Spotify, YouTube, and Google Calendar integration
+- Custom Commands: Create voice macros and routines
+- Privacy Controls: Clear chat history, export data, manage voiceprints
 
 3. Smart Interrupt (Barge-In) — Natural Conversation
 Most voice assistants make you wait until they finish speaking. Pico supports smart interrupt — you can interrupt it mid-sentence, and it immediately stops, listens, and responds to your new command. This makes conversations feel natural, not robotic.
@@ -88,28 +77,20 @@ Most voice assistants make you wait until they finish speaking. Pico supports sm
 Pico recognizes who is speaking. Each family member has their own voiceprint, personalized responses, and permissions. Parents can set different access levels for children. This is rare in DIY projects.
 
 5. Three Distinct Interaction Modes
-Pico isn't just a Q&A bot. It has three powerful modes:
-
-Think: Pure AI creativity — poetry, stories, philosophy, ideas
-
-Search: Real-time web search with AI summarization
-
-Think & Search: Research + synthesis — deep, thoughtful analysis
+- Pico isn't just a Q&A bot. It has three powerful modes:
+- Think: Pure AI creativity — poetry, stories, philosophy, ideas
+- Search: Real-time web search with AI summarization
+- Think & Search: Research + synthesis — deep, thoughtful analysis
 
 6. Complete Customization — Everything is Changeable
 Most assistants let you change your name. Pico lets you change everything:
 
-Wake word: "Hey Pico," "Computer," "Jarvis" — anything
-
-Personality: Friendly, formal, witty, creative, wise — or write your own custom prompt
-
-Voice: Female, male, neutral, any TTS model
-
-Response style: Concise, detailed, creative
-
-Commands: Create your own voice macros and routines
-
-AI provider: Switch anytime
+- Wake word: "Hey Pico," "Computer," "Jarvis" — anything
+- Personality: Friendly, formal, witty, creative, wise — or write your own custom prompt
+- Voice: Female, male, neutral, any TTS model
+- Response style: Concise, detailed, creative
+- Commands: Create your own voice macros and routines
+- AI provider: Switch anytime
 
 7. Real-Time Streaming to Web App
 Pico streams live data to the web app in real-time via WebSockets. You can see the transcription as you speak, watch Pico "think" with a live progress bar, and see the response appear word-by-word — just like ChatGPT.
