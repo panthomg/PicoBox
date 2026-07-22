@@ -36,6 +36,7 @@ Unlike conventional smart speakers, Pico offers an open, modular ecosystem. It g
 - Unlike a phone, you don't have to touch or type anything just call "Hey Pico" and ask. This makes it way easier for younger children to seek for knowledge or senior citizens access such powerful LLMs without them having to deal with complex user interfaces on phone they can use their voice and recieve answer in voice significantly redcuing the time spent on getting you work done. Your phone is designed for the young and tech-savvy. Pico is designed for everyone.
 - 🙌 Truly Hands-Free : When you're cooking, writing, or working—you can't use your phone. Pico is always available.
 - Stationary, always in the room plugged, No notifications, Built for the space
+<img width="2323" height="537" alt="Untitled Document 2 (1) (1) (7)" src="https://github.com/user-attachments/assets/5628841e-ede1-4194-8bbb-768067d2a897" />
 
 ---
 
