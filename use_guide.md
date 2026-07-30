@@ -23,7 +23,7 @@ At the heart of the hardware showcase are Pico's **three primary operational sta
 ### 1. 💭 Think Mode (Local & Training Data Generation)
 
 * **Behavior:** Processes content utilizing purely the foundational AI model's parameters and training data. It does not hit the live web, making it ideal for creative brainstorming and reasoning tasks.
-* **Voice Trigger:** *"Pico, think..."*
+* **Voice Trigger:** *"Hey Pico, think..."*
 
 #### Showcase Prompts & Script
 
@@ -33,7 +33,7 @@ At the heart of the hardware showcase are Pico's **three primary operational sta
 * *"Think... what would Socrates think about pineapples on pizza?"* (Creates complex, witty philosophical debates)
 
 ```
-🎤 You:  "Pico, think... write me a haiku about artificial intelligence."
+🎤 You:  "Hey Pico, think... write me a haiku about artificial intelligence."
 🔵 Pico: 🔔 *Soft chime* "Thinking..." 💭 *Gentle ambient pad* "Processing..."
 🔵 Pico: ✨ "Silicon minds wake / Learning from the data streams / Future born today."
 
@@ -42,7 +42,7 @@ At the heart of the hardware showcase are Pico's **three primary operational sta
 ### 2. 🔍 Search Mode (Real-Time Information Retrieval)
 
 * **Behavior:** Crawls the web in real-time, extracts factual data points, and surfaces a tightly structured summary. Perfect for time-sensitive queries.
-* **Voice Trigger:** *"Pico, search..."*
+* **Voice Trigger:** *"Hey Pico, search..."*
 
 #### Showcase Prompts & Script
 
@@ -52,7 +52,7 @@ At the heart of the hardware showcase are Pico's **three primary operational sta
 * *"Search... best gaming laptops under ₹80,000."* (Compiles market hardware comparisons)
 
 ```
-🎤 You:  "Pico, search... what's the weather in Mumbai today?"
+🎤 You:  "Hey Pico, search... what's the weather in Mumbai today?"
 🔵 Pico: 🔔 *Soft chime* "Searching..." 🔍 *Gentle ambient pad* "Looking up weather data..."
 🔵 Pico: ✨ "Mumbai today is sunny with a high of 32°C and a low of 26°C. There's a 10% chance of rain."
 
@@ -61,7 +61,7 @@ At the heart of the hardware showcase are Pico's **three primary operational sta
 ### 3. 🧠 Think & Search Mode (Deep Research & Synthesis)
 
 * **Behavior:** Pico's most comprehensive pipeline. It pulls multiple disparate sources from the live web, maps them out contextually, and passes them to the model for detailed thematic analysis.
-* **Voice Trigger:** *"Pico, search and think..."* or *"Pico, think and search..."*
+* **Voice Trigger:** *"Hey Pico, search and think..."* or *"Hey Pico, think and search..."*
 
 #### Showcase Prompts & Script
 
@@ -70,7 +70,7 @@ At the heart of the hardware showcase are Pico's **three primary operational sta
 * *"Search and think... what are the pros and cons of electric vehicles?"* (Provides objective technical tradeoffs)
 
 ```
-🎤 You:  "Pico, search and think... how will AI change education?"
+🎤 You:  "Hey Pico, search and think... how will AI change education?"
 🔵 Pico: 🧠 *Soft chime* "Searching and thinking..." 💭 *Deep ambient synthesis*
 🔵 Pico: ✨ "The future of education will be transformed by AI in several key ways:
           1. Personalized learning: Adapts to individual learning paces.
@@ -172,7 +172,7 @@ Follow this sequence to execute a quick validation of Pico’s processing module
  🔵: 🧠 *Synthesizing Context* ➔ ✨ "Autonomous transit will alter civic layouts by..."
 
 [Step 5: Operational Interruption Check]
- 🎤: [Interrupting mid-stream payload] "Actually Pico, summarize that in one sentence."
+ 🎤: [Interrupting mid-stream payload] "Actually Hey Pico, summarize that in one sentence."
  🔵: ⏸️ *Instant Cut-off* ➔ 🗣️ "Understood. In summary: cities will reallocate parking structures..."
 
 ```
