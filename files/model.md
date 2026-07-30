@@ -1,4 +1,3 @@
-Here is a detailed breakdown and description of the **Pico Case** 3D model based on the provided script:
 
 ---
 
