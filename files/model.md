@@ -9,6 +9,13 @@ The script generates two watertight 3D files (`pico_case_base.stl` and `pico_cas
 
 ---
 
+
+<img width="3024" height="4032" alt="IMG_8411" src="https://github.com/user-attachments/assets/1e018b13-85e8-4408-b9f6-2f19cd93ab0b" />
+<img width="3024" height="4032" alt="IMG_8410" src="https://github.com/user-attachments/assets/07e2b375-fa0a-4831-bc41-e10e3187e8e2" />
+<img width="3024" height="4032" alt="IMG_8409" src="https://github.com/user-attachments/assets/e1ac3dc6-c45a-467b-98e9-f058f60deb6a" />
+<img width="3024" height="4032" alt="IMG_8408" src="https://github.com/user-attachments/assets/da859c8c-6a27-4fd4-996c-310b89c2018d" />
+
+
 ## 1. Physical Specifications & Dimensions
 
 * **Width ($W$):** 150.0 mm
