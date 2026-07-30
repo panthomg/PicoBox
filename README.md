@@ -11,6 +11,8 @@ Freedom to ask anything. Pico is for students, for professionals, for the elderl
 Pico talks to you in your natural language. You don't type you speak what you want to. Pico is there to understand you and help you regarding nearly infinite topics and things.
 <img width="6969" height="2346" alt="Untitled Document 2 (1) (1) (2)" src="https://github.com/user-attachments/assets/171b3a07-ade7-4fe8-adf6-e85c630a603b" />
 
+<img width="3024" height="4032" alt="IMG_7746 (2)" src="https://github.com/user-attachments/assets/8df2c769-5106-4f25-963b-92e3e9224caf" />
+<img width="3024" height="4032" alt="IMG_8223" src="https://github.com/user-attachments/assets/e364811d-07e8-4962-9865-7000082ca666" />
 
 
 <img width="6969" height="2346" alt="Untitled Document 2 (1) (1)" src="https://github.com/user-attachments/assets/3d78653f-1259-4090-848d-b92ee29de208" />
@@ -39,6 +41,7 @@ Unlike conventional smart speakers, Pico offers an open, modular ecosystem. It g
 <img width="2323" height="537" alt="Untitled Document 2 (1) (1) (7)" src="https://github.com/user-attachments/assets/5628841e-ede1-4194-8bbb-768067d2a897" />
 
 ---
+<img width="3024" height="4032" alt="IMG_7823 (2)" src="https://github.com/user-attachments/assets/0467e63a-816b-4c12-8d8f-e9f53b772284" />
 
 # What problem is being solved by proposed project Pico?
 
@@ -139,6 +142,17 @@ Pico is optimized for speed: wake word detection under 50ms, STT under 200ms, an
 
 ---
 
+
+<table>
+  <tr>
+    <td width="50%"><img src="https://github.com/user-attachments/assets/b9400f91-2dd2-45ea-9388-37b0d126bf13" width="100%"/></td>
+    <td width="50%"><img src="https://github.com/user-attachments/assets/5aee3132-8e4e-4f78-8c0d-43e25216e984" width="100%"/></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="https://github.com/user-attachments/assets/8cde1ffd-d5d4-4af8-8e1c-015574084622" width="100%"/></td>
+    <td width="50%"><img src="https://github.com/user-attachments/assets/6477d78f-7fbb-45cd-95fb-3d000d1af194" width="100%"/></td>
+  </tr>
+</table>
 
 
 ## 📄 License & Copyright
