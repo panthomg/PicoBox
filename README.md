@@ -11,8 +11,12 @@ Freedom to ask anything. Pico is for students, for professionals, for the elderl
 Pico talks to you in your natural language. You don't type you speak what you want to. Pico is there to understand you and help you regarding nearly infinite topics and things.
 <img width="6969" height="2346" alt="Untitled Document 2 (1) (1) (2)" src="https://github.com/user-attachments/assets/171b3a07-ade7-4fe8-adf6-e85c630a603b" />
 
-<img width="3024" height="4032" alt="IMG_7746 (2)" src="https://github.com/user-attachments/assets/8df2c769-5106-4f25-963b-92e3e9224caf" />
-<img width="3024" height="4032" alt="IMG_8223" src="https://github.com/user-attachments/assets/e364811d-07e8-4962-9865-7000082ca666" />
+<table>
+  <tr>
+    <td width="50%"><img src="https://github.com/user-attachments/assets/8df2c769-5106-4f25-963b-92e3e9224caf" width="100%"/></td>
+    <td width="50%"><img src="https://github.com/user-attachments/assets/e364811d-07e8-4962-9865-7000082ca666" width="100%"/></td>
+  </tr>
+</table>
 
 
 <img width="6969" height="2346" alt="Untitled Document 2 (1) (1)" src="https://github.com/user-attachments/assets/3d78653f-1259-4090-848d-b92ee29de208" />
