@@ -58,7 +58,7 @@ a companion that helps you understand, explore, and learn. It gives you freedom:
 choose any AI provider, customize everything, and never get locked in. No subscriptions. No barriers. 
 Just knowledge, accessible to everyone.
 
-<img width="2323" height="537" alt="Untitled Document 2 (1) (1) (8)" src="https://github.com/user-attachments/assets/57a40f8b-15ec-4a33-9c06-e558da58cc07" />
+<img width="232" height="53" alt="Untitled Document 2 (1) (1) (8)" src="https://github.com/user-attachments/assets/57a40f8b-15ec-4a33-9c06-e558da58cc07" />
 
 ---
 
