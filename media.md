@@ -351,50 +351,6 @@ python main.py
 → "searching and synthesizing..."
 ```
 
-### the shape of the code
-
-```
-pico/
-├── main.py                    orchestrator
-├── wake_word.py                Porcupine
-├── speaker_verification.py     Eagle — voiceprints
-├── stt.py                      Vosk
-├── tts.py                      Piper
-├── vad.py                      Silero — smart interrupt
-├── ai_client.py                the universal mind-socket
-├── ai_providers/                one adapter per mind
-│   ├── deepseek.py
-│   ├── openai.py
-│   ├── anthropic.py
-│   ├── google.py
-│   ├── groq.py
-│   ├── ollama.py
-│   └── custom.py
-├── command_router.py           think / search / both
-├── web_search.py
-├── chat_storage.py             SQLite
-├── streaming.py                WebSocket server
-├── config.py
-├── devices/
-│   ├── spotify.py
-│   └── youtube.py
-├── webapp/
-│   ├── backend/
-│   └── frontend/
-├── data/
-│   ├── pico_config.json
-│   └── voiceprint.json
-├── sounds/
-│   ├── pico_wake.wav
-│   ├── pico_listening.wav
-│   ├── pico_thinking.wav
-│   └── pico_ready.wav
-├── scripts/
-│   ├── setup.sh
-│   └── configure.py
-├── requirements.txt
-└── README.md
-```
 
 ---
 
