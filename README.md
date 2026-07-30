@@ -45,7 +45,7 @@ Unlike conventional smart speakers, Pico offers an open, modular ecosystem. It g
 <img width="2323" height="537" alt="Untitled Document 2 (1) (1) (7)" src="https://github.com/user-attachments/assets/5628841e-ede1-4194-8bbb-768067d2a897" />
 
 ---
-<img width="3024" height="4032" alt="IMG_7823 (2)" src="https://github.com/user-attachments/assets/0467e63a-816b-4c12-8d8f-e9f53b772284" />
+<img width="302" height="403" alt="IMG_7823 (2)" src="https://github.com/user-attachments/assets/0467e63a-816b-4c12-8d8f-e9f53b772284" />
 
 # What problem is being solved by proposed project Pico?
 
@@ -58,7 +58,7 @@ a companion that helps you understand, explore, and learn. It gives you freedom:
 choose any AI provider, customize everything, and never get locked in. No subscriptions. No barriers. 
 Just knowledge, accessible to everyone.
 
-<img width="232" height="53" alt="Untitled Document 2 (1) (1) (8)" src="https://github.com/user-attachments/assets/57a40f8b-15ec-4a33-9c06-e558da58cc07" />
+<img width="2323" height="537" alt="Untitled Document 2 (1) (1) (8)" src="https://github.com/user-attachments/assets/57a40f8b-15ec-4a33-9c06-e558da58cc07" />
 
 ---
 
