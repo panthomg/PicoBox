@@ -2,7 +2,7 @@
 <img width="6951" height="3225" alt="Untitled Document 2 (1)" src="https://github.com/user-attachments/assets/fc2be432-f714-4b43-b5ba-200988178e2c" />
 
 # PICO — Hands-Free Voice AI Assiant Speaker 
-> Note: Everything written below is written/typed by a human please don't mind mistakes. A human can make mistake.
+> Note: Most of the things written below are written/typed by a human please don't mind mistakes. A human can make mistake.
 
 
 **"For those who ask. For those who question."**
