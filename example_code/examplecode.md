@@ -1,7 +1,87 @@
-# Example code of PICO OS
-- There a heavy development going on into PICO OS, this example code is one of the base it is being worked upon.
-pico_assistant_v5.py
+Here is a complete, clean, and professionally formatted `README.md` file ready for GitHub. You can copy and paste the raw content directly into your repository's `README.md`.
 
+***
+
+```markdown
+# 🎙️ PICO OS — Prototype Engine (v5)
+
+> ⚠️ **Note:** Active development is currently underway for **PICO OS**. The code provided here (`pico_assistant_v5.py`) represents one of the baseline architectural engines powering real-time voice, reasoning, and live search capabilities.
+
+---
+
+## 🌟 Overview & Key Refinements in v5
+
+PICO OS Baseline v5 is a real-time, low-latency, voice-first intelligence engine. It combines acoustic wake-word detection, dynamic voice-activity recording, ultra-fast STT, web scraping capabilities, LLaMA-3.3-70B reasoning, and neural TTS speech generation.
+
+### 📊 Key Technical Features
+* **Real-Time Telemetry HUD:** Live diagnostic readout detailing time spent across every stage (STT, Web Search, LLM Inference, TTS Synthesis, and Round-Trip Latency).
+* **Token Analytics Counter:** Accurate consumption metrics per interaction (Input Tokens, Output Tokens, Total Tokens).
+* **Sub-Second Dynamic VAD:** Recording automatically cuts off ~0.6 seconds after speech ends, dramatically cutting round-trip latency.
+* **Echo Suppression & Feedback Protection:** Mutes microphone buffers during speech output to eliminate feedback loops.
+* **Dual-Import Web Search:** Self-healing live web research engine adapting seamlessly across DuckDuckGo client revisions.
+* **Acoustic Feedback System:** Synthesizes procedural audio chimes to confirm wake, reasoning, search, and exit events.
+
+---
+
+## ⚡ Multi-Mode Voice Commands
+
+| Mode | Trigger Phrases | Engine Action |
+| :--- | :--- | :--- |
+| **Standard Mode** | *"What is quantum entanglement?"* | Direct, 1–2 sentence rapid conversational answer. |
+| **Think Mode** | *"Pico, think about room-temperature superconductors"* | Deep analytical reasoning & multi-sentence synthesis. |
+| **Search Mode** | *"Pico, search for current stock market news"* | Live web scraping + context-aware summarization. |
+| **Search & Think** | *"Pico, search and think about renewable energy trends"* | Live web research combined with deep comparative analysis. |
+
+---
+
+## 🛠️ Prerequisites & Installation
+
+### 1. System Dependencies
+Ensure PortAudio is installed on your operating system for low-latency microphone access:
+
+* **Ubuntu / Debian:** `sudo apt-get install portaudio19-dev`
+* **macOS:** `brew install portaudio`
+* **Windows:** Handled automatically via `sounddevice` wheels.
+
+### 2. Python Packages
+Install the required dependencies:
+
+```bash
+pip install numpy sounddevice soundfile pygame groq edge-tts vosk duckduckgo-search
+```
+
+### 3. Vosk Speech Recognition Model
+Download a standard English Vosk model and extract it into your script working directory (or rely on automatic downloading depending on your Vosk environment):
+
+```bash
+# Downloads lightweight Vosk model automatically on first startup if missing
+```
+
+---
+
+## 🔑 Environment Variables Setup
+
+PICO OS loads API credentials securely via environment variables. Set your keys in your environment before execution:
+
+### Linux / macOS
+```bash
+export GROQ_API_KEY="your_actual_groq_api_key"
+export OPENROUTER_API_KEY="your_openrouter_key"    # Optional fallback
+export NVIDIA_API_KEY="your_nvidia_key"            # Optional fallback
+```
+
+### Windows (PowerShell)
+```powershell
+$env:GROQ_API_KEY="your_actual_groq_api_key"
+$env:OPENROUTER_API_KEY="your_openrouter_key"      # Optional fallback
+$env:NVIDIA_API_KEY="your_nvidia_key"              # Optional fallback
+```
+
+---
+
+## 💻 Baseline Core Code (`pico_assistant_v5.py`)
+
+```python
 import os
 import sys
 import json
@@ -433,17 +513,34 @@ if __name__ == "__main__":
         main()
     except KeyboardInterrupt:
         print("\nExiting Pico Assistant v5. ●")
+```
 
-Setup Instructions for Your GitHub README.md:
+---
 
-Advise users in your README.md to export their API keys before running the
-script:
+## 💻 Sample Terminal Output
 
-# On Linux / macOS
-export GROQ_API_KEY="your_actual_groq_key_here"
+```text
+● PICO ASSISTANT V5 ONLINE
+--------------------------------------------------
+● [PING!] Wake word recognized!
+● [LISTENING] Speak now...
+● You: "Pico, search and think about upcoming space missions"
+🌊 [SEARCH MODE] Scanning web data...
+💭 [THINK MODE] Deep reasoning engine active...
+● Searching web for: "upcoming space missions"
+● Pico: "Artemis III aims to return humans to the lunar surface while robotic explorers target Mars and Europa."
+● Telemetry   : 1.18s total [STT: 0.18s | Search: 0.32s | LLM: 0.38s | TTS: 0.30s]
+● Token Usage : 142 in / 38 out (180 total)
+● [CONTINUOUS] Listening for follow-up...
+```
 
-# On Windows PowerShell
-$env:GROQ_API_KEY="your_actual_groq_key_here"
+---
 
-# Run the assistant
-python pico_assistant_v5.py
+## 📜 Roadmap
+
+- [x] Sub-second dynamic voice detection
+- [x] Live telemetry and HUD breakdown
+- [x] Self-echo cancellation & audio queue purging
+- [ ] Multimodal vision inputs (In development for PICO OS v6)
+- [ ] On-device function-calling & system tool controls
+```
