@@ -27,6 +27,7 @@ Pico talks to you in your natural language. You don't type you speak what you wa
 **Always ready to answer anything you ask 24/7 at your service**
 **Use any LLM Model you want, your choice. Add custom commands, personality, actions, etc.**
 **Unlike other electronics with support LLM like your phone and pcs, Pico stands distraction free dedicated for you reach your motive.** 
+<img width="2323" height="782" alt="Untitled Document 2 (1) (2) (1)" src="https://github.com/user-attachments/assets/8450968e-561e-4ded-bddb-cd3de01b11dc" />
 
 
 Unlike conventional smart speakers, Pico offers an open, modular ecosystem. It gives users complete agency over their hardware and software: choose any AI model (from cloud APIs to local offline models), configure custom voice triggers, set hard token budgets, and manage the device through a responsive React companion web app.
