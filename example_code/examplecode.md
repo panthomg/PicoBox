@@ -1,13 +1,8 @@
-Here is a complete, clean, and professionally formatted `README.md` file ready for GitHub. You can copy and paste the raw content directly into your repository's `README.md`.
 
-***
-
-```markdown
+---
 # 🎙️ PICO OS — Prototype Engine (v5)
 
 > ⚠️ **Note:** Active development is currently underway for **PICO OS**. The code provided here (`pico_assistant_v5.py`) represents one of the baseline architectural engines powering real-time voice, reasoning, and live search capabilities.
-
----
 
 ## 🌟 Overview & Key Refinements in v5
 
