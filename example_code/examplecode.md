@@ -1,17 +1,5 @@
-Here is the sanitized, production-ready code for GitHub.
-
-All sensitive API keys have been removed and replaced with safe environment
-variable retrievals (os.getenv). You can now commit this safely to public
-repositories.
-
-Key Changes Made:
-
-1.  API Keys Secured: Removed all hardcoded plain-text API credentials.
-2.  Environment Variable Integration: Configured the script to automatically
-    fetch keys from environment variables (e.g., GROQ_API_KEY), falling back to
-    placeholders if missing.
-3.  GitHub Ready: Cleaned up documentation header and comments.
-
+# Example code of PICO OS
+- There a heavy development going on into PICO OS, this example code is one of the base it is being worked upon.
 pico_assistant_v5.py
 
 import os
