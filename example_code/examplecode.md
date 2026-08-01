@@ -1,3 +1,4 @@
+<img width="2323" height="782" alt="Untitled Document 2 (1) (2) (2)" src="https://github.com/user-attachments/assets/d577f9fa-15a1-4279-8f48-b757137250a9" />
 
 ---
 # 🎙️ PICO OS — Prototype Engine (v5)
