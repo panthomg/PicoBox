@@ -61,6 +61,7 @@ Just knowledge, accessible to everyone.
 <img width="2323" height="537" alt="Untitled Document 2 (1) (1) (8)" src="https://github.com/user-attachments/assets/57a40f8b-15ec-4a33-9c06-e558da58cc07" />
 
 ---
+<img width="2323" height="782" alt="Untitled Document 2 (1) (2)" src="https://github.com/user-attachments/assets/addec120-f836-4be1-b683-c97da8a00876" />
 
 # Are there any aspects that make your project unique from similar projects online?
 
