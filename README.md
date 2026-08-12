@@ -148,88 +148,216 @@ Pico is optimized for speed: wake word detection under 50ms, STT under 200ms, an
 
 ---
 # OS Installation Guide
+Here is your architecture overview and project documentation formatted in clean, structured Markdown.
 
-Core Voice Pipeline :
+---
 
-core/audio_io.py — 4-mic array, 5m far-field, VAD, RMS dB barge-in detection, mock fallback
-core/wake_word.py — Porcupine wrapper (<50ms target), custom keywords pico, hey pico, computer, jarvis
-core/speaker_verification.py — Eagle + utils/voiceprint_store.py multi-user enrollment/verification
-core/stt.py — Vosk offline 200-300ms + mock keyboard fallback
-core/tts.py — Piper neural TTS + mock sine generator, speak() with blocking/non-blocking + stop for barge-in
-core/interrupter.py — Smart Interrupt: talk over Pico while it speaks → stops TTS and re-listens
-core/router.py — Three modes you specified:
-THINK → Pico, think... pure reasoning
-SEARCH → Pico, search... web search + summary
-THINK & SEARCH → Pico, search and think... deep research + synthesis
-core/memory.py — per-user short-term (20 turns) + long-term preferences JSON
-core/lifecycle.py — Main loop orchestrating all above + latency tracking
-Any AI Provider:
+# Pico OS: Voice AI Core Architecture
 
-ai/manager.py + ai/deepseek.py, openai_provider.py, anthropic.py, gemini.py, groq.py, ollama.py, custom.py
-Auto token tracking, INR cost estimation, switch via set provider to ollama
-Personalities: friendly, formal, witty, creative, wise + concise/detailed from config/personalities.yaml
-Free local path: Ollama ₹0/month, DeepSeek Flash ₹60-120/month as per your pricing
-Web Search & Services:
+A complete end-to-end voice AI pipeline featuring offline STT/TTS, multi-user voiceprint verification, multi-provider LLM routing, smart interruption, and a built-in companion web interface.
 
-services/search_service.py — Tavily (if key) + DuckDuckGo fallback, formats results for LLM
-services/spotify.py — Spotipy playback
-services/youtube.py — yt-dlp audio search
-services/smart_home/mqtt_client.py, wiz.py, matter.py — MQTT, Matter, Wiz lights
-services/telephony/lte_module.py, voip.py, agora_receptionist.py — AT commands + TinyGSM, SIP, Agora RTC receptionist
-Companion Web App (FastAPI + WebSocket) — companion/server.py:
+---
 
-Dashboard, device key pairing (pairing.py — same Wi-Fi check, secure key that can't be copied)
-Remote Mode: phone as mic/speaker over WebSocket (WebRTC ready)
-Settings: wake word, TTS voice, personality, AI provider
-Chat history, token usage + budget limits (utils/budget.py, token_tracker.py)
-Voiceprint enrollment UI, service connections
-Embedded in main.py — runs at http://localhost:8765 with dot-matrix UI matching your website
-Onboarding: onboarding/voice_guided.py — 11-step voice-guided setup, generates device key, enrolls owner
+## Architecture Overview
 
-Project Structure
-Code
-`pico_os/
-├── main.py — entry point
-├── config/config.yaml + personalities.yaml
-├── core/ — audio_io, wake_word, speaker_verification, stt, tts, router, memory, interrupter, lifecycle
-├── ai/ — 7 providers + manager
-├── services/ — search, spotify, youtube, smart_home/, telephony/
-├── companion/ — FastAPI server, WebSocket manager, pairing
-├── utils/ — logger, latency, token_tracker, budget, voiceprint_store
-├── onboarding/
-├── data/voiceprints/ + memory/
-├── requirements.txt + .env.example + run.sh`
+### 1. Core Voice Pipeline
 
-6 lines hidden
-How to Run
-`Bash
+* **`core/audio_io.py`**: 4-microphone array support with 5-meter far-field pickup, VAD (Voice Activity Detection), RMS dB barge-in detection, and mock input fallback.
+* **`core/wake_word.py`**: Picovoice Porcupine wrapper (<50ms target latency) supporting custom keywords (`pico`, `hey pico`, `computer`, `jarvis`).
+* **`core/speaker_verification.py`**: Picovoice Eagle integration coupled with `utils/voiceprint_store.py` for multi-user voice enrollment and verification.
+* **`core/stt.py`**: Offline Vosk Speech-to-Text engine (200–300ms execution target) with interactive keyboard fallback for testing.
+* **`core/tts.py`**: Fast local neural TTS using Piper (includes sine wave generator fallback). Exposes a unified `speak()` function supporting blocking/non-blocking modes and instant barge-in cancellation.
+* **`core/interrupter.py`**: Smart Interrupt system—allows users to talk over Pico while it speaks, immediately signaling TTS to halt and re-entering the listening loop.
+* **`core/router.py`**: Mode router supporting three operational states:
+* **`THINK`**: `"Pico, think..."` — Executes pure local/cloud reasoning.
+* **`SEARCH`**: `"Pico, search..."` — Performs live web search and generates a concise summary.
+* **`THINK & SEARCH`**: `"Pico, search and think..."` — Performs multi-step deep research and synthesis.
+
+
+* **`core/memory.py`**: Short-term memory management (20-turn sliding context window per user) plus long-term persistent user preference storage in JSON format.
+* **`core/lifecycle.py`**: System orchestration loop managing audio streams, execution state, and precision latency metrics tracking across all stages.
+
+---
+
+### 2. AI Providers & Intelligence Engine
+
+* **Provider Management (`ai/manager.py`)**: Central manager routing prompts dynamically across multiple API and local backends:
+* `ai/deepseek.py`
+* `ai/openai_provider.py`
+* `ai/anthropic.py`
+* `ai/gemini.py`
+* `ai/groq.py`
+* `ai/ollama.py`
+* `ai/custom.py`
+
+
+* **Resource Optimization**: Automated token usage tracking, real-time INR cost estimations, and hot-swapping providers on command (e.g., `"set provider to ollama"`).
+* **Personalities (`config/personalities.yaml`)**: Dynamic personality switching including *friendly*, *formal*, *witty*, *creative*, and *wise*, combined with configurable output brevity levels (*concise* / *detailed*).
+* **Cost Efficiency**: Supports 100% free local execution via Ollama (₹0/month) or high-efficiency cloud execution via DeepSeek Flash (~₹60–120/month).
+
+---
+
+### 3. Web Search & External Services
+
+* **Search Engine (`services/search_service.py`)**: Primary web search using Tavily API with automatic fallback to DuckDuckGo, formatting scraped web data directly into structured LLM contexts.
+* **Media & Playback**:
+* `services/spotify.py`: Native playback control via Spotipy.
+* `services/youtube.py`: Audio extraction and streaming via `yt-dlp`.
+
+
+* **Smart Home Integration**:
+* `services/smart_home/`: Multi-protocol local automation engine via standard **MQTT**, **Wiz** light discovery, and **Matter** protocol layers.
+
+
+* **Telephony & RTC**:
+* `services/telephony/`: Hardware telephony engine with LTE AT commands (`lte_module.py` / `TinyGSM`), VoIP SIP signaling (`voip.py`), and real-time WebRTC receptionist streams (`agora_receptionist.py`).
+
+
+
+---
+
+### 4. Companion Web App (`companion/server.py`)
+
+Built with FastAPI and WebSockets, running locally at `http://localhost:8765` featuring a Stockholm Metro-inspired dot-matrix UI.
+
+* **Live Dashboard**: Real-time status indicators, system logs, active provider views, and latency visualizers.
+* **Secure Key Pairing (`pairing.py`)**: Local network Wi-Fi boundary verification generating non-copyable device keys.
+* **Remote Mode**: Transforms any browser-capable mobile phone or client into a wireless microphone/speaker client over WebSockets (WebRTC ready).
+* **Settings Control**: Live UI adjustment for active wake words, Piper TTS voice models, assistant personalities, and AI providers.
+* **Analytics & Limits**: Complete historical chat logs paired with token consumption monitoring and budget safety thresholds (`utils/budget.py`, `utils/token_tracker.py`).
+* **Enrollment Suite**: Built-in voiceprint capture UI for adding and managing user profiles.
+
+---
+
+### 5. Onboarding Engine (`onboarding/voice_guided.py`)
+
+An interactive, 11-step voice-guided setup flow that runs upon initial boot up. Generates unique secure device hardware keys and guides the primary owner through their initial voiceprint enrollment.
+
+---
+
+## Project Structure
+
+```text
+pico_os/
+├── main.py                   # Entry point script
+├── config/
+│   ├── config.yaml           # Main hardware & service configuration
+│   └── personalities.yaml    # System prompts for personalities
+├── core/                     # Voice pipeline execution core
+│   ├── audio_io.py
+│   ├── wake_word.py
+│   ├── speaker_verification.py
+│   ├── stt.py
+│   ├── tts.py
+│   ├── router.py
+│   ├── memory.py
+│   ├── interrupter.py
+│   └── lifecycle.py
+├── ai/                       # LLM Provider abstraction layer
+│   ├── manager.py
+│   ├── deepseek.py
+│   ├── openai_provider.py
+│   ├── anthropic.py
+│   ├── gemini.py
+│   ├── groq.py
+│   ├── ollama.py
+│   └── custom.py
+├── services/                 # External service drivers
+│   ├── search_service.py
+│   ├── spotify.py
+│   ├── youtube.py
+│   ├── smart_home/           # MQTT, Wiz, Matter engines
+│   └── telephony/            # LTE, SIP, Agora RTC
+├── companion/                # FastAPI & WebSocket companion UI
+│   ├── server.py
+│   └── pairing.py
+├── utils/                    # Shared system utilities
+│   ├── logger.py
+│   ├── latency.py
+│   ├── token_tracker.py
+│   ├── budget.py
+│   └── voiceprint_store.py
+├── onboarding/               # First-time setup modules
+├── data/                     # Persistent voiceprints & memory stores
+│   ├── voiceprints/
+│   └── memory/
+├── requirements.txt          # Python dependencies
+├── .env.example              # Environment variables template
+└── run.sh                    # Startup wrapper script
+
+```
+
+---
+
+## Getting Started
+
+### 1. Installation
+
+```bash
 cd pico_os
-pip install -r requirements.txt`
 
-# Set keys (optional - works in mock without them)
-`cp .env.example .env`
-# Edit .env with your DEEPSEEK_API_KEY, OPENAI_API_KEY etc + PICOVOICE_ACCESS_KEY
+# Install required Python packages
+pip install -r requirements.txt
 
-# Mock mode - type instead of speaking (perfect for testing all features)
-`python main.py --mock --companion --onboard`
+# Configure environment variables (works in mock mode without keys)
+cp .env.example .env
 
-# Real hardware mode (Arduino UNO Q + mic array)
-`python main.py --companion`
+```
 
-6 lines hidden
-In mock mode try:
+> **Note:** Open `.env` and add your respective keys if applicable: `DEEPSEEK_API_KEY`, `OPENAI_API_KEY`, `PICOVOICE_ACCESS_KEY`, etc.
 
-Code
-`hey pico, think what is quantum physics like I'm 10
+---
+
+### 2. Execution Modes
+
+#### Mock Mode (CLI Input / Development)
+
+Run without microphone hardware to simulate interactions via keyboard input:
+
+```bash
+python main.py --mock --companion --onboard
+
+```
+
+#### Real Hardware Mode
+
+Run on target hardware (e.g., Arduino UNO Q with array microphone connected):
+
+```bash
+python main.py --companion
+
+```
+
+---
+
+### 3. Example Commands (Mock Mode)
+
+Try entering the following prompts directly in mock mode:
+
+```text
+hey pico, think what is quantum physics like I'm 10
 pico, search latest Arduino UNO Q news
 pico, search and think research proposal for voice AI
 set personality to witty
-set wake word to computer`
-Open http://localhost:8765 — you'll see the Stockholm Metro-inspired companion board with remote chat, token costs, and user management.
+set wake word to computer
 
-Performance Tracked
-utils/latency.py logs: wake <50ms, STT 200-300ms, first token ∼1.4s, TTS 1-3s, end-to-end 2.5-4.5s simple.
+```
 
+Visit **`http://localhost:8765`** in your web browser to open the companion control dashboard.
+
+---
+
+## Performance Metrics
+
+Tracked automatically in `utils/latency.py`:
+
+| Execution Stage | Target Latency |
+| --- | --- |
+| **Wake Word Detection** | `< 50 ms` |
+| **Speech-To-Text (Vosk)** | `200 – 300 ms` |
+| **LLM First Token Time** | `~ 1.4 s` |
+| **TTS Generation (Piper)** | `1.0 – 3.0 s` |
+| **End-to-End Simple Pipeline** | **`2.5 – 4.5 s`** |
 <table>
   <tr>
     <td width="50%"><img src="https://github.com/user-attachments/assets/b9400f91-2dd2-45ea-9388-37b0d126bf13" width="100%"/></td>
