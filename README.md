@@ -372,16 +372,7 @@ Tracked automatically in `utils/latency.py`:
 </table>
 
 
-## 📄 License & Copyright
 
-**© 2026 Panth Mavani, Gujarat, India. All Rights Reserved.**
-
-PicoBox is a proprietary project. No part of this software or its associated documentation may be copied, modified, distributed, or used without explicit written permission from the author.
-
-* **Licensing Inquiries:** omgpanth6623@gmail.com
-* *Made with ❤️ for those who ask. For those who question.* 🎙️✨
-
----
 
 ## 🔗 Quick Links
 * [WEBPAGE](https://panthomg.github.io/PicoBox/)
